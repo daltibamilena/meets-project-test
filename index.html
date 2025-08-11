@@ -2,14 +2,24 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>External Files Example</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Inline Example</title>
+    <style>
+        button.clicked {
+            background-color: #f44336;
+        }
+    </style>
 </head>
-<body>
+<body style="font-family: Arial, sans-serif; text-align: center; padding-top: 50px;">
 
     <h1>Button Color Toggle</h1>
-    <button id="colorBtn">Click Me</button>
+    <button id="colorBtn" style="padding: 10px 20px; font-size: 16px; cursor: pointer; background-color: #4CAF50; color: white; border: none; border-radius: 5px;">Click Me</button>
 
-    <script src="script.js"></script>
+    <script>
+        const btn = document.getElementById("colorBtn");
+        btn.addEventListener("click", () => {
+            btn.classList.toggle("clicked");
+        });
+    </script>
+
 </body>
 </html>
